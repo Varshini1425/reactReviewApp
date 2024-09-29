@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", system-ui;
+  background-color: #0f302d;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0px auto;
+}
+
+h5 {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 50px 0px;
+}
+
+header {
+  text-align: center;
+  /* background-color: #070776;
+  color: #ffffff; */
+  padding: 15px;
+  margin-bottom: 50px;
+}
+
+.card {
+  padding: 20px;
+  background-color: #e5e5e5;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.edit {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+}
+.delete {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form input {
+  width: 85%;
+  padding: 15px 15px;
+  border: none;
+  border-radius: 15px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.btn {
+  padding: 12px 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  border-radius: 15px;
+}
+
+.btn-primary {
+  background-color: rgba(38, 163, 152, 1);
+}
+
+.btn-secondary {
+  background-color: #4326a3;
+  margin-left: 15px;
+}
+
+.btn:disabled {
+  background-color: grey;
+  color: #000000;
+  cursor: not-allowed;
+}
+
+.no-feedback {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.error {
+  color: #e13636;
+  margin-top: 20px;
+  text-align: center;
+}
