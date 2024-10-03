@@ -1,0 +1,13 @@
+{
+    "posts": [
+      { "id": "1", "text": "Film Critic's Corner" },
+      { "id": "2", "text": "Cinematic Impressions" },
+      {"id":"4", "text":"Reel Talk: Your Movie Review"},
+      {"id":"5", "text":"Screen Scene Feedback"},
+      {"id":"6", "text":"Popcorn & Perspectives"},
+      {"id":"7", "text":"The Moviegoer's Voice"},
+      {"id":"8", "text":"Silver Screen Sentiments"},
+      {"id":"9", "text":"Flick Feedback"},
+      {"id":"10", "text":"Cinema Chatter"}
+    ]
+}

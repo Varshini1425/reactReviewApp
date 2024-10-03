@@ -1,35 +1,43 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 const FeedbackContext = createContext();
 
 export const FeedbackProvider = ({ children }) => {
-  const [feedback, setFeedback] = useState([
-    {
-      id: 1,
-      text: "This is a context one",
-    },
-    {
-      id: 2,
-      text: "This is a context two",
-    },
-    {
-      id: 3,
-      text: "This is a context three",
-    },
-    {
-      id: 4,
-      text: "This is a context four",
-    },
-    {
-      id: 5,
-      text: "This is a context five",
-    },
-    {
-      id: 6,
-      text: "This is a context six",
-    },
-  ]);
+  // const [feedback, setFeedback] = useState([
+  //   {
+  //     id: 1,
+  //     text: "This is a context one",
+  //   },
+  //   {
+  //     id: 2,
+  //     text: "This is a context two",
+  //   },
+  //   {
+  //     id: 3,
+  //     text: "This is a context three",
+  //   },
+  //   {
+  //     id: 4,
+  //     text: "This is a context four",
+  //   },
+  //   {
+  //     id: 5,
+  //     text: "This is a context five",
+  //   },
+  //   {
+  //     id: 6,
+  //     text: "This is a context six",
+  //   },
+  // ]);
+  const [feedback, setFeedback] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/posts")
+      .then((response) => response.json())
+      .then((jsonData) => setFeedback(jsonData))
+      .catch((err) => console.log(`Error fetching the data:`, err));
+  }, []);
 
   const [editFeedback, setEditFeedback] = useState({
     item: {},
